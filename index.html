@@ -5,20 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Riyanti</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <header class="nav-container">
         <div class="logo-icon"></div>
-
         <nav>
             <a>Home</a>
-            <a>Our Profile</a>
-            <a>Portofolio</a>
-            <a>Massage Us</a>
+            <a href="#our-profile">Our Profile</a>
+            <a href="#banner-container">Portfolio</a>
+            <a href="#message-us">Message Us</a>
         </nav>
     </header>
-    <hr />
-
     <main>
         <section>
             <header>
@@ -31,30 +29,70 @@
                 <div class="banner-container"></div>
             </article>
         </section>
-
         <hr />
 
-        <section>
+        <section id="our-profile">
             <header>
                 <h1>Our Profile</h1>
             </header>
             <article class="profile-content">
                 <div class="profile-item">
-                    <div class="profile-icon"></div>
+                    <div class="profile-icon profil-1"></div>
                     <p>Profile 1</p>
                 </div>
                 <div class="profile-item">
-                    <div class="profile-icon"></div>
+                    <div class="profile-icon profil-2"></div>
                     <p>Profile 2</p>
                 </div>
                 <div class="profile-item">
-                    <div class="profile-icon"></div>
+                    <div class="profile-icon profil-3"></div>
                     <p>Profile 3</p>
                 </div>
-                
+                <div class="divider"></div>
             </article>
         </section>
-    </main>
+        <hr />
 
+        <section id="message-us" class="message-us">
+            <h2>Message Us</h2>
+            <div class="form-container">
+                <form id="message-form">
+                    <div class="form-group">
+                        <label for="name">Nama:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Tanggal Lahir:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Jenis Kelamin:</label>
+                        <div class="gender-options">
+                            <input type="radio" id="male" name="gender" value="Laki-Laki" required>
+                            <label for="male">Laki-Laki</label>
+                            <input type="radio" id="female" name="gender" value="Perempuan" required>
+                            <label for="female">Perempuan</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="submitted-data">
+                    <p>Current time: <span id="current-time"></span></p>
+                    <p>Nama: <span id="submitted-name"></span></p>
+                    <p>Tanggal Lahir: <span id="submitted-dob"></span></p>
+                    <p>Jenis Kelamin: <span id="submitted-gender"></span></p>
+                    <p>Pesan: <span id="submitted-message"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Created By RevoU</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
